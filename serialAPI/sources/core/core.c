@@ -589,6 +589,11 @@ TxRxStatus_t SBGC32_FindCommand (GeneralSBGC_t *generalSBGC, SerialCommand_t *se
 					return motor4_ControlReferenceInfoArrayElCnt;
 					break;
 
+				case PM_MOTOR_DATA_CONTROL :
+					*buffArr = motor_DataReferenceInfoArray;
+					return motor_DataReferenceInfoArrayElCnt;
+					break;
+
 				#if (SBGC_CONTROL_MODULE)
 
 					case PM_CONTROL :
