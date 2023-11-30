@@ -77,6 +77,17 @@
 	/**	@}
 	 */
 
+	const ParameterReferenceInfo_t motor_DataReferenceInfoArray [] =
+	{
+		PARAM_BLOCK_(	"Motor Power", 				_SIGNED_SHORT_				),	// 0
+		PARAM_BLOCK_(	"Motor Current",			_UNSIGNED_SHORT_			),	// 1
+		PARAM_BLOCK_(	"Motor Temp",				_SIGNED_CHAR_				),	// 2
+		PARAM_BLOCK_(	"Motor Flags",				_UNSIGNED_SHORT_			),	// 3
+		PARAMS_BLOCK_(	"Reserved",					_UNSIGNED_CHAR_,		18	),	// 4
+	};
+
+	const ui8 motor_DataReferenceInfoArrayElCnt = countof_(motor_DataReferenceInfoArray);
+
 #endif
 
 
