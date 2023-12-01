@@ -991,7 +991,7 @@ typedef struct __PACKED__
     ui16    MOT_CURRENT;
     i8      MOT_TEMP;
     ui16    MOT_FLAGS;
-    ui8     MOT_RESERVED[18];
+    ui8     MOT_RESERVED[6];
 
 }			MotorData_t;
 
