@@ -432,9 +432,9 @@ TxRxStatus_t SBGC32_RequestRealTimeDataCustom (GeneralSBGC_t *generalSBGC, RealT
 					break;
 					
 							case RTDCF_SYSTEM_POWER_STATE :
-								ReadBuff(&cmd, &realTimeDataCustom->MotorData[AXIS_X], sizeof(MotorData_t), PM_MOTOR_DATA_CONTROL);
-								ReadBuff(&cmd, &realTimeDataCustom->MotorData[AXIS_Y], sizeof(MotorData_t), PM_MOTOR_DATA_CONTROL);
-								ReadBuff(&cmd, &realTimeDataCustom->MotorData[AXIS_Z], sizeof(MotorData_t), PM_MOTOR_DATA_CONTROL);
+								ReadBuff(&cmd, &realTimeDataCustom->MotorData_r, sizeof(MotorData_t), PM_MOTOR_DATA_CONTROL);
+								ReadBuff(&cmd, &realTimeDataCustom->MotorData_p, sizeof(MotorData_t), PM_MOTOR_DATA_CONTROL);
+								ReadBuff(&cmd, &realTimeDataCustom->MotorData_y, sizeof(MotorData_t), PM_MOTOR_DATA_CONTROL);
 								realTimeDataCustom->SYSTEM_POWER_STATE = ReadByte(&cmd);
 								realTimeDataCustom->BATTERY_VOLTAGE = ReadWord(&cmd);
 								realTimeDataCustom->TOTAL_CURRENT = ReadWord(&cmd);

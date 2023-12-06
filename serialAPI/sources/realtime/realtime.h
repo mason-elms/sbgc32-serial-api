@@ -536,7 +536,9 @@ typedef struct __PACKED__
 														  ROLL, PITCH, YAW motors, lower byte first. Frw. ver. 2.68+					*/
 	float 	IMU_AnglesRad [3];						/*!<  Main IMU Euler angles in radians. Frw. ver. 2.68b7+							*/
 
-	MotorData_t     MotorData[3];
+	MotorData_t     MotorData_r,
+					MotorData_p,
+					MotorData_y;
     i8              SYSTEM_POWER_STATE;
     ui16            BATTERY_VOLTAGE,
                     TOTAL_CURRENT,
